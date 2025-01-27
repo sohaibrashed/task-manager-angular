@@ -3,14 +3,10 @@ import { TestBed } from '@angular/core/testing';
 import { ProjectsService } from './projects.service';
 
 describe('ProjectsService', () => {
-  let service: ProjectsService;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ProjectsService);
-  });
+  beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
+    const service: ProjectsService = TestBed.get(ProjectsService);
     expect(service).toBeTruthy();
   });
 });
